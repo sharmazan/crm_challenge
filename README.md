@@ -30,8 +30,8 @@ Django backend to list and search AppUser, Address and CustomerRelationship reco
 - last_activity
 
 # TODO
-- Set up a Django project
-- Add models
+- ___Set up a Django project - done___
+- ___Add models - done___
 - Write a management command to insert random values. Add 100 records for testing
 - Add a View for the data structure that join all 3 tables and return JsonResponse with attributes from all 3 tables
 - Add sort, filter and list by any field
@@ -44,3 +44,6 @@ Django backend to list and search AppUser, Address and CustomerRelationship reco
     - Sort by points, filter by city, page=5 with 50 records in each
 - Add performance optimisations
 - Compare results with initial benchmarks
+
+# Notes
+1. This task implemented using pure Django. For the production purposes it's better use [Django Cookiecutter template](https://cookiecutter-django.readthedocs.io/en/latest/) with Django Rest Framework. 
