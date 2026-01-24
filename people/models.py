@@ -1,7 +1,4 @@
-from enum import Enum
 from django.db import models
-
-
 
 
 class Address(models.Model):
@@ -10,6 +7,9 @@ class Address(models.Model):
     city_code = models.CharField(max_length=5)
     city = models.CharField(max_length=40)
     country = models.CharField(max_length=40)
+
+    def __str__(s):
+        return f"{s.city_code} {s.country} {s.city} {s.street} {s.street_number}"
 
 
 class AppUser(models.Model):
