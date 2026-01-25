@@ -62,5 +62,4 @@ class Command(BaseCommand):
             ]
             CustomerRelationship.objects.bulk_create(relationship_list)
 
-
         self.stdout.write(self.style.SUCCESS(f'Successfully added {number_of_records} data!'))

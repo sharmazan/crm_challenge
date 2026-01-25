@@ -31,13 +31,16 @@ class AppUser(models.Model):
     customer_id = models.UUIDField()
     phone_number = models.CharField(max_length=15)
     created = models.DateTimeField(auto_now_add=True)
-    address_id = models.ForeignKey(Address, on_delete=models.PROTECT)
+    address = models.ForeignKey(Address, on_delete=models.PROTECT)
     birthday = models.DateField()
     last_updated = models.DateField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 class CustomerRelationship(models.Model):
-    appuser_id = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    appuser = models.ForeignKey(AppUser, on_delete=models.CASCADE)
     points = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     last_activity = models.DateTimeField()
