@@ -8,6 +8,9 @@ class Address(models.Model):
     city = models.CharField(max_length=40)
     country = models.CharField(max_length=40)
 
+    class Meta:
+        verbose_name_plural = "Addresses"
+
     def __str__(s):
         return f"{s.city_code} {s.country} {s.city} {s.street} {s.street_number}"
 
